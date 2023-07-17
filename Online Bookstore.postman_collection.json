@@ -1,0 +1,977 @@
+{
+	"info": {
+		"_postman_id": "81ea6de3-50b8-4a54-be66-f5129d16c963",
+		"name": "Online Bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17788652"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rangga\",\r\n    \"email\": \"rangga@gmail.com\",\r\n    \"password\": \"rangga123\",\r\n    \"roles\": [\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Tanpa Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ana\",\r\n    \"email\": \"ana@gmail.com\",\r\n    \"password\": \"ana123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Validation Gagal Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rangga\",\r\n    \"email\": \"rangga@gmail.com\",\r\n    \"password\": \"rangga123\",\r\n    \"roles\": [\"moderator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Username Sudah Ada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rangga\",\r\n    \"email\": \"rangga@gmail.com\",\r\n    \"password\": \"rangga123\",\r\n    \"roles\": [\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Email Sudah Ada",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ranggacihuyy\",\r\n    \"email\": \"rangga@gmail.com\",\r\n    \"password\": \"rangga123\",\r\n    \"roles\": [\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rangga\",\r\n    \"password\": \"rangga123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Gagal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rangga\",\r\n    \"password\": \"ranggamantap\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Menambah Buku",
+					"item": [
+						{
+							"name": "Menambah Buku",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTgzMTAxLCJleHAiOjE2ODk2Njk1MDF9.DLTMcO7G9bpqItqxk19JK42kyv5qtIkSrPq5FfLNx-w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Surat Kematian (Death Notice) - Buku Kesatu",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "ZHOU HAOHUI",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "78750",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/RANGGA RADITYA/Downloads/gambar buku/9786020657240_Surat_kematian_cov.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menambah Buku Bukan Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjg5NTgzMDU0LCJleHAiOjE2ODk2Njk0NTR9.SCzIcPCy56x9SeqtvdOuWb_dfHz0QaEYb4ryvKd7WTs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Surat Kematian (Death Notice) - Buku Kesatu",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "ZHOU HAOHUI",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "78750",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/RANGGA RADITYA/Downloads/gambar buku/9786020657240_Surat_kematian_cov.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menambah Buku Gagal",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTI1MzQ2LCJleHAiOjE2ODk2MTE3NDZ9.ynO0aA3ZqEwVQ2yTQOZ7B6nOSGAQJTjp67ADu6AUUmk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Surat Kematian (Death Notice) - Buku Kesatu",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "ZHOU HAOHUI",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "78750",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/RANGGA RADITYA/Downloads/gambar buku/9786020657240_Surat_kematian_cov.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menambah Buku Tanpa Token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Surat Kematian (Death Notice) - Buku Kesatu",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "ZHOU HAOHUI",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "78750",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/RANGGA RADITYA/Downloads/gambar buku/9786020657240_Surat_kematian_cov.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menambah Buku Token Salah",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTI1MzQ2LCJleHAiOjE2ODk2MTE3NDZ9.ynO0aA3ZqEwVQ2yTQOZ7B6nOSGAQJTjp67ADu6AUUmk2",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Surat Kematian (Death Notice) - Buku Kesatu",
+											"type": "text"
+										},
+										{
+											"key": "author",
+											"value": "ZHOU HAOHUI",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "78750",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/RANGGA RADITYA/Downloads/gambar buku/9786020657240_Surat_kematian_cov.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Menampilkan Buku",
+					"item": [
+						{
+							"name": "Menampilkan Seluruh Buku",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menampilkan Buku Berdasarkan Title",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books?keywords=bodo amat",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "keywords",
+											"value": "bodo amat"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menampilkan Buku Berdasarkan Author",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books?keywords=liwafa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "keywords",
+											"value": "liwafa"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menampilkan Buku Tetapi Tidak Ada yang Cocok",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books?keywords=random",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "keywords",
+											"value": "random"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Menampilkan Detail Buku",
+					"item": [
+						{
+							"name": "Menampilkan Detail Buku",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Menampilkan Detail Buku yang Tidak Ada",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjg5NTI2OTM3LCJleHAiOjE2ODk2MTMzMzd9.TtZN1oNB7jG35WF5fuPkqc7ewcFfuchNARFpWhvBeAA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/books/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "Menambah Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTc3MDAxLCJleHAiOjE2ODk2NjM0MDF9.VrYMT3qTWA5hyehdzw4ijTwesmHNfniYHCt6nsLVaCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menambah Cart Tanpa Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menambah Cart ID Buku Tidak Ada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTc3MDAxLCJleHAiOjE2ODk2NjM0MDF9.VrYMT3qTWA5hyehdzw4ijTwesmHNfniYHCt6nsLVaCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 100,\r\n  \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Seluruh Buku di Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTc3MDAxLCJleHAiOjE2ODk2NjM0MDF9.VrYMT3qTWA5hyehdzw4ijTwesmHNfniYHCt6nsLVaCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Seluruh Buku di Cart Tanpa Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Melakukan Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTc3MDAxLCJleHAiOjE2ODk2NjM0MDF9.VrYMT3qTWA5hyehdzw4ijTwesmHNfniYHCt6nsLVaCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ratings",
+			"item": [
+				{
+					"name": "Menambah Rating Pada Buku",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTgzMTAxLCJleHAiOjE2ODk2Njk1MDF9.DLTMcO7G9bpqItqxk19JK42kyv5qtIkSrPq5FfLNx-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 1,\r\n    \"ratingValue\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Menambah Review Pada Buku",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NTgzMTAxLCJleHAiOjE2ODk2Njk1MDF9.DLTMcO7G9bpqItqxk19JK42kyv5qtIkSrPq5FfLNx-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 2,\r\n    \"reviewText\": \"emejing lah keren\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
